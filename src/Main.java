@@ -14,6 +14,13 @@ public class Main {
         int py2 = sc.nextInt();
         distance d1 = new distance();
         double ans = d1.dis(px1,py1,px2,py2);
-        System.out.println("the distance between two point is " + ans);
+        // checking if two lines are equal or not! by using the end points
+        // so dis (x1,y1,x2,y2) == dis(x2,y2,x1,y1) must be equal
+        if(d1.dis(px1,py1,px2,py2) == d1.dis(px2,py2,px1,py1)){
+            System.out.println("Both lines are equal!");
+        }
+        else{
+            System.out.println("both are not equal!");
+        }
     }
 }
